@@ -15,7 +15,7 @@ f1 и f2 равны
 
 public class BigDecimalEqDouble {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
        /*Создаем два объекта BigDecimal - ноль и 0.1.
        Делаем то же самое что и раньше - прибавляем 0.1 к нулю 11 раз подряд
@@ -52,7 +52,7 @@ public class BigDecimalEqDouble {
 
 class EqualsFloatDouble {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
         final double threshold = 0.0001;
 
