@@ -1,13 +1,11 @@
 package EasyTasks;
 
-/*
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.*;
-*/
 
 /*
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +17,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class TestjUnit {
     BankAccount account = new BankAccount("a", "b");
-/*
+
     @Test
     public void shouldNotBeBlockedWhenCreated() {
         BankAccount account = new BankAccount("a", "b");
@@ -47,7 +45,7 @@ public class TestjUnit {
         BankAccount account = new BankAccount("a", "b");
         account.activate("RUB");
 
-        String[] arrayOne = new String[] {"a", "b"};
+        String[] arrayOne = new String[]{"a", "b"};
         String[] arrayTwo = account.getFullName();
 
         assertArrayEquals(arrayTwo, arrayOne, "Массивы не равны!");
@@ -73,7 +71,6 @@ public class TestjUnit {
                 });
         assertEquals("Счёт не активирован.", exception.getMessage());
     }
-*/
 }
 
 class BankAccount {
@@ -115,6 +112,6 @@ class BankAccount {
     }
 
     public String[] getFullName() {
-        return new String[] {firstName, secondName};
+        return new String[]{firstName, secondName};
     }
 }
