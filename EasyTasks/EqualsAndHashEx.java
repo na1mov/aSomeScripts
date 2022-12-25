@@ -23,25 +23,38 @@ public class EqualsAndHashEx {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null) {
+        if (this == o)
+            return true;
+        if (o == null || o.getClass() != this.getClass())
             return false;
-        }
-        if (!(o instanceof EqualsAndHashEx)) return false;
 
         EqualsAndHashEx solution1 = (EqualsAndHashEx) o;
-        if (Double.compare(solution1.aDouble, aDouble) != 0) return false;
-        if (anInt != solution1.anInt) return false;
-        if (date != null ? !date.equals(solution1.date) : solution1.date == null) return false;
-        if (solution != null ? !solution.equals(solution1.solution) : solution1.solution == null) return false;
-        if (string != null ? !string.equals(solution1.string) : solution1.string == null) return false;
+
+        if (Double.compare(solution1.aDouble, aDouble) != 0)
+            return false;
+        if (anInt != solution1.anInt)
+            return false;
+        if (date != solution1.date && (date != null && !date.equals(solution1.date)))
+            return false;
+        if (solution != solution1.solution && (solution != null && !solution.equals(solution1.solution)))
+            return false;
+        if (string != solution1.string && (string != null && !string.equals(solution1.string)))
+            return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(anInt,string,aDouble,date,solution);
+        int result;
+        long temp;
+        result = anInt;
+        temp = aDouble != +0.0d ? Double.doubleToLongBits(aDouble) : 0L;
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (solution != null ? solution.hashCode() : 0);
+        result = 31 * result + (string != null ? string.hashCode() : 0);
+        return result;
     }
 
     public static void main(String[] args) {
