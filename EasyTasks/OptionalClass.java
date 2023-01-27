@@ -13,7 +13,7 @@ import java.util.Optional;
 Optional.of(оборачиваемоеЗначение), а для создания пустого объекта-обёртки — Optional.empty().
 */
 
-public class ClassOptional {
+public class OptionalClass {
 
     public static Optional<String> longestName(List<Optional<String>> maybeNames) {
         if (maybeNames.isEmpty()) {

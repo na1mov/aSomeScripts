@@ -1,4 +1,4 @@
-package EasyTasks;
+package EasyTasks.lambda;
 
 import java.util.*;
 import java.util.function.Consumer;

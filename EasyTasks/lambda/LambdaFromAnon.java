@@ -1,9 +1,9 @@
-package EasyTasks;
+package EasyTasks.lambda;
 
 import java.util.Comparator;
 import java.util.function.Consumer;
 
-public class FromAnonToLambda {
+public class LambdaFromAnon {
     public static class AnonTest {
 
         public static void main(String[] args) {

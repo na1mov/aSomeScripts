@@ -1,10 +1,10 @@
-package EasyTasks;
+package EasyTasks.streamApi;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GenericStream {
+public class StreamGeneric {
 
     public static void main(String[] args) {
         Map<String, Integer> badWords = new HashMap<>();
